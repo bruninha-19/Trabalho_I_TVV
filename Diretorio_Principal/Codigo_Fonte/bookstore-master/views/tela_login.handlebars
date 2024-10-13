@@ -1,0 +1,26 @@
+<main>
+  <div class="container-login">
+    <div class="imagem-login">
+      <img src="/imagens/fundo_livro2.webp" alt="Imagem de login" />
+    </div>
+
+    <div class="container-form-login">
+      <h1>Login</h1>
+      {{#if error}}
+        <div class="error-message">{{error}}</div>
+      {{/if}}
+      <form action="/login" method="post">
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Entrar</button>
+        <h5>Ainda não tem conta? <a href="/cadastro">Cadastre-se</a></h5>
+      </form>
+    </div>
+  </div>
+</main>

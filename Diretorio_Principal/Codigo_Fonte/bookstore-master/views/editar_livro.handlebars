@@ -1,0 +1,90 @@
+<main>
+    <div class="container-editar-livro">
+
+        <div class="imagem-form-edit-livro">
+            <img src="/imagens/livro4.jpg" alt="">
+
+        </div>
+
+        <div class="editar-livro">
+            <h2>Editar Livro</h2>
+            <form action="/editar-livro/{{livro.id}}" method="post" enctype="multipart/form-data">
+                <div class="input-group-editar">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" name="titulo" value="{{livro.titulo}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="autor" value="{{livro.autor}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="editora">Editora</label>
+                    <input type="text" id="editora" name="editora" value="{{livro.editora}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="ano">Ano</label>
+                    <input type="text" id="ano" name="ano" value="{{livro.ano}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" name="isbn" value="{{livro.isbn}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4" required>{{livro.descricao}}</textarea>
+                </div>
+                <div class="input-group-editar">
+                    <label for="paginas">Número de Páginas</label>
+                    <input type="number" id="paginas" name="paginas" value="{{livro.paginas}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="estado">Estado do Livro</label>
+                    <input type="text" id="estado" name="estado" value="{{livro.estado}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="preco">Preço do Livro</label>
+                    <input type="text" id="preco" name="preco" value="{{livro.preco}}" required />
+                </div>
+                <div class="input-group-editar">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="ficcao" {{#ifEqual livro.categoria 'ficcao' }}selected{{/ifEqual}}>Ficção
+                        </option>
+                        <option value="nao-ficcao" {{#ifEqual livro.categoria 'nao-ficcao' }}selected{{/ifEqual}}>Não
+                            Ficção
+                        </option>
+                        <option value="fantasia" {{#ifEqual livro.categoria 'fantasia' }}selected{{/ifEqual}}>Fantasia
+                        </option>
+                        <option value="biografia" {{#ifEqual livro.categoria 'biografia' }}selected{{/ifEqual}}>
+                            Biografia
+                        </option>
+                        <option value="auto-ajuda" {{#ifEqual livro.categoria 'auto-ajuda' }}selected{{/ifEqual}}>
+                            Autoajuda
+                        </option>
+                        <option value="ciencia" {{#ifEqual livro.categoria 'ciencia' }}selected{{/ifEqual}}>Ciência
+                        </option>
+                        <option value="historia" {{#ifEqual livro.categoria 'historia' }}selected{{/ifEqual}}>História
+                        </option>
+                        <option value="infantil" {{#ifEqual livro.categoria 'infantil' }}selected{{/ifEqual}}>Infantil
+                        </option>
+                        <!-- Adicione outras categorias conforme necessário -->
+                    </select>
+                </div>
+                <div class="input-group-editar">
+                    <label for="imagem">Imagem</label>
+                    <input type="file" id="imagem" name="imagem" />
+                    <img src="{{livro.imagem}}" alt="Imagem do livro"
+                        style="width: 100px; height: auto; margin-top: 10px;">
+                </div>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+</main>

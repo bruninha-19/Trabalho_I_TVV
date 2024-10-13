@@ -1,0 +1,135 @@
+<!-- views/index.handlebars -->
+<main>
+  <div class="conteudo">
+    <!--Carrossel de informações-->
+    <div class="carrossel">
+      <div class="carrossel-imagens">
+        <img src="/imagens/homem-lendo.jpg" alt="imagem" class="slider" />
+        <img src="/imagens/mulher-lendo.jpg" alt="imagem" class="slider" />
+        <img src="/imagens/mulher-lendo2.jpg" alt="imagem" class="slider" />
+      </div>
+      <div class="carrossel-btn">
+        <button id="prev-button">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="next-button">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <!--Fim Carrossel de informações-->
+
+    <!-- Todos os livros -->
+    <div class="container">
+      {{#each all_books}}
+      <div class="conteiner-livros">
+        <img src="{{this.imagem}}" alt="Imagem do livro" />
+        <h2>{{this.titulo}}</h2>
+        <h4>{{this.autor}}</h4>
+        <div class="content">
+          <a href="/livro/{{this.id}}">Comprar</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="btn-decubra-mais">
+      <a href="/categoria">DESCUBRA MAIS LIVROS</a>
+    </div>
+
+    <div class="faixa-propaganda">
+      <h2>Explore Livros Únicos</h2>
+      <h5>Encontre, troque e venda livros de forma simples e divertida</h5>
+      <div class="banners">
+        <div class="conteudo-banner">
+          <img src="/imagens/banner1.jpeg" alt="">
+          <h3>Troca</h3>
+          <p>Troque seus livros favoritos por novas aventuras literárias!</p>
+          <div class="botao-banner">
+            <a href="/categoria">Começar Agora</a>
+          </div>
+        </div>
+        <div class="conteudo-banner">
+          <img src="/imagens/banner2.jpeg" alt="">
+          <h3>Venda</h3>
+          <p>Anuncie seus livros e faça negócios incríveis com apaixonados por leitura!</p>
+          <div class="botao-banner">
+            <a href="/categoria">Começar Agora</a>
+          </div>
+        </div>
+        <div class="conteudo-banner">
+          <img src="/imagens/banner3.jpeg" alt="">
+          <h3>Explorar</h3>
+          <p>Explore categorias variadas e descubra tesouros literários que vão te surpreender!</p>
+          <div class="botao-banner">
+            <a href="/categoria">Começar Agora</a>
+          </div>
+        </div>
+        <div class="conteudo-banner">
+          <img src="/imagens/banner4.jpeg" alt="">
+          <h3>Conectar</h3>
+          <p>Conecte-se com amantes de livros e compartilhe sua paixão por histórias inesquecíveis!</p>
+          <div class="botao-banner">
+            <a href="/categoria">Começar Agora</a>
+          </div>
+        </div>
+        <div class="conteudo-banner">
+          <img src="/imagens/banner5.jpeg" alt="">
+          <h3>Contato</h3>
+          <p>Converse com vendedores via WhatsApp ou chat integrado e mergulhe no universo dos livros!</p>
+          <div class="botao-banner">
+            <a href="/categoria">Começar Agora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Escolha o seu livro!</h1>
+
+    <div class="container-genero">
+      <div class="genero-imagem">
+        <img src="/imagens/drama.jpg" alt="livro" />
+        <a href="/categoria">Drama</a>
+      </div>
+      <div class="genero-imagem">
+        <img src="/imagens/ficção1.webp" alt="livro" />
+        <a href="/categoria">Ficção</a>
+      </div>
+      <div class="genero-imagem">
+        <img src="/imagens/romance.jpg" alt="livro" />
+        <a href="/categoria">Romance</a>
+      </div>
+      <div class="genero-imagem">
+        <img src="/imagens/misterio.jpg" alt="livro" />
+        <a href="/categoria">Mistérios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="plano-de-fundo">
+    <h1> Como Aproveitar ao Máximo a Leitura de Livros</h1>
+    <h4>Escolhendo o Livro Certo</h4>
+    <p>A escolha do livro é o primeiro passo para uma experiência de leitura agradável e<br>
+     enriquecedora. Considere seus interesses pessoais, recomendações de amigos e críticas<br>
+     literárias. Se estiver em dúvida, explore diferentes gêneros para descobrir novos favoritos.<br>
+     Em nossa plataforma, você encontrará resenhas e avaliações que podem  ajudar na escolha.</p>
+  </div>
+
+  <!--Container dos Destaques-->
+  <div class="container-destaques">
+    <h1>Destaques</h1>
+    <div class="container">
+      {{#each destaques}}
+      <div class="conteiner-livros">
+        <img src="{{this.imagem}}" alt="Imagem do livro" />
+        <h2>{{this.titulo}}</h2>
+        <h4>{{this.autor}}</h4>
+        <div class="content">
+          <a href="/livro/{{this.id}}">Comprar</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <!--Fim Container dos Destaques-->
+</main>

@@ -1,0 +1,41 @@
+<main>
+    <div class="main-content">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <h2>Opções</h2>
+            <ul>
+                <li><a href="#romance">Romance</a></li>
+                <li><a href="#ficcao">Ficção</a></li>
+                <li><a href="#fantasia">Fantasia</a></li>
+                <li><a href="#biografia">Biografia</a></li>
+                <li><a href="#historico">Histórico</a></li>
+                <li><a href="#suspense">Suspense</a></li>
+                <li><a href="#aventura">Aventura</a></li>
+                <li><a href="#infantil">Infantil</a></li>
+            </ul>
+        </aside>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <h1>Categorias de Livros</h1>
+
+            {{#each categorias}}
+            <div class="category" id="{{@key}}">
+                <h2>{{@key}}</h2>
+                <div class="container-categoria-livros">
+                    {{#each this}}
+                    <div class="livros-categoria">
+                        <img src="{{imagem}}" alt="livro" />
+                        <h2>{{titulo}}</h2>
+                        <h4>{{autor}}</h4>
+                        <div class="content">
+                            <a href="/livro/{{id}}">Comprar</a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </section>
+    </div>
+</main>

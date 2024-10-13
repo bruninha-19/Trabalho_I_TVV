@@ -1,0 +1,38 @@
+<main>
+    <div class="container-edit-usuario">
+        <form class="form-edit-usuario" action="" method="post">
+            <div class="edit-usuario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="{{user.nome}}" required>
+            </div>
+            <div class="edit-usuario">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" value="{{user.sobrenome}}" required>
+            </div class="edit-usuario">
+            <div class="edit-usuario">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{user.email}}" required>
+            </div>
+            <div class="edit-usuario">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" value="{{user.telefone}}" required>
+            </div>
+            <div class="edit-usuario">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" value="{{user.whatsapp}}" required>
+            </div>
+            <div class="edit-usuario">
+                <label for="password">Nova Senha:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="edit-usuario">
+                <label for="confirma_password">Confirme a Nova Senha:</label>
+                <input type="password" id="confirma_password" name="confirma_password">
+            </div>
+            <button type="submit">Salvar</button>
+        </form>
+        <div class="imagem-edit-usuario">
+            <img src="/imagens/livro3.webp" alt="">
+        </div>
+    </div>
+</main>

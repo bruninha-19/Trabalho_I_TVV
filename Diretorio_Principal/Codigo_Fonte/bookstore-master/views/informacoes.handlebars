@@ -1,0 +1,44 @@
+<main>
+  <div class="container-infor">
+    <div class="container-descricao">
+      <div class="descricao">
+        <div class="imagem-livro">
+          <img src="{{livro.imagem}}" alt="Imagem do livro" />
+        </div>
+        <div class="informacoes">
+          <h1>{{livro.titulo}}</h1>
+          <h4><strong>Autor:</strong> {{livro.autor}}</h4>
+          <h3><strong>R${{livro.preco}}</strong></h3>
+          <p>{{livro.resumo}}</p>
+          <h3><strong>Editora:</strong> {{livro.editora}}</h3>
+          <h3><strong>Ano:</strong> {{livro.ano}}</h3>
+          <h3><strong>Páginas:</strong> {{livro.paginas}}</h3>
+          <h3><strong>ISBN:</strong> {{livro.isbn}}</h3>
+          <a class="button" href="/negociar">Negociar</a>
+
+        </div>
+      </div>
+
+      <div class="descricao-livro">
+        <h2>Descrição</h2>
+        <p>{{livro.descricao}}</p>
+      </div>
+    </div>
+
+    <div class="livros-relacionados">
+      <h1>Livros Relacionados</h1>
+      <div class="container">
+        {{#each destaques}}
+        <div class="conteiner-livros">
+          <img src="{{this.imagem}}" alt="Imagem do livro" />
+          <h2>{{this.titulo}}</h2>
+          <h4>{{this.autor}}</h4>
+          <div class="content">
+            <a href="/livro/{{this.id}}">Comprar</a>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</main>
