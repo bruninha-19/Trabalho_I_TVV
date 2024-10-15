@@ -1,5 +1,3 @@
-Aqui está uma versão melhor formatada para o seu conteúdo, com uma estrutura clara e consistente que será exibida de forma mais organizada no GitHub:
-
 ---
 
 # Exemplos de Uso - Login
