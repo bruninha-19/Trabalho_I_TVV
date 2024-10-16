@@ -1,4 +1,4 @@
-# Dicionário de Dados Completo - Sistema de Troca e Venda de Livros (Book Store)
+# Dicionário de Dados - Sistema de Troca e Venda de Livros (Book Store)
 
 ## Dicionário de Dados em Tabela (Formato GitHub)
 
