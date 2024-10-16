@@ -153,9 +153,7 @@
 
 ### Issue 7: Notificações não estão sendo enviadas para transações.
 
-| **Atributo**            |
-
- **Exemplo preenchido**                                                                 |
+| **Atributo**            | **Exemplo preenchido**                                                                 |
 |-------------------------|----------------------------------------------------------------------------------------|
 | **ID de Defeito**        | DEF-2024-007                                                                           |
 | **Descrição**            | O serviço de notificação não está funcionando corretamente, impedindo que alertas de transações sejam enviados aos usuários. |
